@@ -4,8 +4,6 @@
 
 ## The tutorial
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/h4dHvo09cG4?si=hsCNV9KAK6_HMEbm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 This repo is for [a video tutorial by Kevin Powell](https://youtu.be/h4dHvo09cG4) taking on [Frontend Mentor's challenge](https://www.frontendmentor.io/challenges/bento-grid-RMydElrlOj?via=kevinpowell) of creating the Bento grid pictured above.
 
 ## Following along
