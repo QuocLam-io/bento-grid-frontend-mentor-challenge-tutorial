@@ -28,7 +28,6 @@
 }
 
 @layer reset {
-
   *,
   *::before,
   *::after {
@@ -92,7 +91,19 @@
   }
 }
 
-@layer layout {}
+@layer layout {
+  .bento-grid {
+    display: grid;
+    gap: 24px;
+  }
+
+  .bento-grid > * {
+    color: var(--bento-card-foreground, var(--black));
+    background-color: var(--bento-card-surface, var(--white));
+    padding: var(--bento-card-padding, 32px);
+    border-radius: var(--bento-card-border-radius, 21px);
+  }
+}
 
 @layer utilities {
   .visually-first {
