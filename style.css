@@ -20,7 +20,7 @@
   --off-white: hsl(0, 0%, 96%);
   --black: hsl(0, 0%, 7%);
 
-  --fs-reg: 1.25rem;
+  --fs-reg: 1.75rem;
 
   --fs-md: 2.25rem;
   --fs-lg: 3rem;
@@ -76,7 +76,8 @@
   }
 
   h1,
-  h2 {
+  h2,
+  h3 {
     color: var(--heading-foreground, inherit);
     font-size: var(--heading-font-size, var(--fs-md));
     line-height: 1.1;
@@ -102,6 +103,82 @@
     background-color: var(--bento-card-surface, var(--white));
     padding: var(--bento-card-padding, 32px);
     border-radius: var(--bento-card-border-radius, 21px);
+
+    overflow: clip;
+
+    display: grid;
+    gap: var(--bento-card-gap, 32px);
+    align-content: var(--bento-card-vertical-alignment, start);
+    justify-items: var(--bento-card-horizontal-alignment, start);
+    text-align: var(--bento-card-horizontal-alignment, start);
+  }
+
+  .bento-grid img {
+    max-width: var(--bento-card-image-width, 100%);
+    width: var(--bento-card-image-width, 100%);
+    order: var(--bento-card-image-order);
+  }
+
+  .bento-grid > :nth-child(1) {
+    --heading-font-size: var(--fs-xl);
+    --heading-span-foreground: var(--accent-base);
+    --bento-card-foreground: var(--white);
+    --bento-card-surface: var(--primary-base);
+    --bento-card-padding: 48px;
+
+    --bento-card-horizontal-alignment: center;
+    --bento-card-image-width: 70%;
+    --bento-card-gap: 16px;
+  }
+  .bento-grid > :nth-child(2) {
+    --bento-card-image-order: -1;
+
+    /* fixing shadows in asset */
+    > img {
+      filter: drop-shadow(0 0 1rem hsl(0 0% 0%/ 0.25));
+      border-radius: 100vw;
+    }
+  }
+
+  .bento-grid > :nth-child(3) {
+    --bento-card-surface: var(--accent-base);
+
+    > img {
+      --bento-card-image-width: 75%;
+      margin-bottom: -65px;
+    }
+  }
+
+  .bento-grid > :nth-child(4) {
+    --bento-card-horizontal-alignment: center;
+    --bento-card-surface: var(--primary-subdued);
+  }
+
+  .bento-grid > :nth-child(5) {
+    --bento-card-horizontal-alignment: center;
+    --bento-card-surface: var(--primary-base);
+    --bento-card-foreground: var(--white);
+    --bento-card-image-width: 75%;
+    --bento-card-image-order: -1;
+  }
+
+  .bento-grid > :nth-child(6) {
+    --heading-span-font-size: var(--fs-xl);
+    --heading-span-display: block;
+    --heading-font-size: var(--fs-reg);
+    --bento-card-image-width: 60%;
+  }
+
+  .bento-grid > :nth-child(7) {
+    --heading-span-foreground: var(--primary-base);
+    --bento-card-surface: var(--accent-subdued);
+    --heading-span-style: italic;
+    --bento-card-image-width: 60%;
+  }
+
+  .bento-grid > :nth-child(7) {
+    --bento-card-surface: var(--accent-base);
+    --bento-card-image-width: 60%;
   }
 }
 
